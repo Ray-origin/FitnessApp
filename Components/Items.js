@@ -7,7 +7,7 @@ import {
   StyleSheet,
 } from 'react-native';
 import SV from '../Images/Girls/SV.jpg'
-export default function ChooseLever (props) {
+export default function Items (props) {
     const {onPress , ChangeID} = props;
         return (
            <TouchableOpacity activeOpacity={0.5}

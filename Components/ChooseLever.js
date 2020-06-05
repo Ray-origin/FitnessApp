@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import{ StyleSheet, View, FlatList} from 'react-native'
-import Items from '../Components/Items.js';
+import React from 'react'
+import{ StyleSheet, View, FlatList,Image} from 'react-native'
+import Items from './Items'
 // import Details from './Details'
 
 export default class ChooseLever extends React.Component{
@@ -22,9 +22,9 @@ export default class ChooseLever extends React.Component{
           <View>
             <FlatList
                 data={categories}
-                renderItems={({item}) => <Items ChangeID={item} onPress={() => navigation.navigate('Details')}/>}
+                renderItem={({ item }) => <Items ChangeID={item} onPress={() => navigation.navigate('Details')} />}
                 keyExtractor={item => `${item.id}`}
-                containContainerStyle={style.container}
+                contentContainerStyle={style.container}
             />
           </View>
       )
